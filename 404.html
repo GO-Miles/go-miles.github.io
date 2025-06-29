@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Redirecting...</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<script>
 
 		const normalize = str => str.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -24,7 +24,7 @@
 			]
 		};
 
-		const normalizedPath = normalize(window.location.pathname.replace(/^\/+|\/+$/g, ''));
+		const normalizedPath = normalize(window.location.pathname);
 
 		let found = false;
 		for (const [canonicalPath, aliases] of Object.entries(redirectMap)) {
@@ -38,6 +38,7 @@
 			if (found) break;
 		}
 	</script>
+
 </head>
 
 <body>
