@@ -11,17 +11,28 @@
 		const normalize = str => str.toLowerCase().replace(/[^a-z0-9]/g, '');
 
 		// Canonical redirect map: { canonicalPath: [alias1, alias2, ...] }
-		const redirectMap = {
-			"Funkin-MINECRAFT": [
-				"funkinminecraft",
-				"funkinminecraftmod",
-				"fnfminecraft",
-				"fnfmc",
-				"funkinmc"
-			],
-			"BEANBAGGERS": [
-				"beanbaggers"
-			]
+		const redirectMap =
+		{
+			"Funkin-MINECRAFT":
+				[
+					"funkinminecraft",
+					"funkinminecraftmod",
+					"fnfminecraft",
+					"fnfmc",
+					"funkinmc"
+				],
+			"BEANBAGGERS":
+				[
+					"beanbaggers"
+				],
+			"FUNKIN-GALAXY-PENGUIN":
+				[
+					"galaxypenguin",
+					"fnfmariopenguin",
+					"galaxypenguinsite",
+					"funkingalaxypenguiin",
+					"funkingalaxypenguinsite"
+				]
 		};
 
 		const normalizedPath = normalize(window.location.pathname);
