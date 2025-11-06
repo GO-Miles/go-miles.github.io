@@ -7,9 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script>
-
 		const normalize = str => str.toLowerCase().replace(/[^a-z0-9]/g, '');
-
 		// Canonical redirect map: { canonicalPath: [alias1, alias2, ...] }
 		const redirectMap =
 		{
@@ -51,18 +49,15 @@
 				]
 		};
 
-		const normalizedPath = normalize(window.location.pathname);
+		const rawPath = window.location.pathname.split('/').filter(Boolean).pop() || '';
+		const cleanedPath = rawPath.replace(/\.html$/, '');
+		const normalizedPath = normalize(cleanedPath);
 
-		let found = false;
 		for (const [canonicalPath, aliases] of Object.entries(redirectMap)) {
-			for (const alias of aliases) {
-				if (alias === normalizedPath) {
-					window.location.replace(`/${canonicalPath}`);
-					found = true;
-					break;
-				}
+			if (aliases.includes(normalizedPath)) {
+				window.location.replace(`/${canonicalPath}`);
+				break;
 			}
-			if (found) break;
 		}
 	</script>
 
