@@ -70,12 +70,30 @@ h1 {
     box-shadow: inset 0px 0px 0px 0.05em var(--nav), 0px 0.05em 0px var(--border);
 }
 
+h2 {
+    font-size: min(5em, 7.5vw);
+    margin: auto;
+}
+
+.content p {
+    max-width: var(--width);
+    text-indent: 2em;
+    text-align: left;
+}
+
 p.tagline {
+    text-indent: 0em;
     color: var(--muted);
     font-size: min(1.6em, 2.4vw);
     margin-left: 8em;
     margin-top: -2.3em;
-    padding-bottom: 2em;
+    padding-bottom: 0.5em;
+    text-align: center;
+
+}
+
+.links {
+    margin: 1em;
 }
 
 .links a {
@@ -144,4 +162,10 @@ footer {
     color: var(--muted);
     border-top: 0.5em solid var(--border);
     font-size: 0.9em;
+}
+
+footer p {
+    text-indent: 0em;
+    max-width: 100%;
+    text-align: center;
 }
