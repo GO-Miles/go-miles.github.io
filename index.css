@@ -4,11 +4,9 @@
     --fg: #c9d1d9;
     --muted: #8b949e;
     --card: #161b22;
-    --link: #ffcc00;
+    --link: #EFA94A;
     --link-hover: #ffa500;
     --border: #20232a;
-    --one: #F5D033;
-    --heeh: #EFA94A;
     --two: #82aafa;
     --tri: #ff3300;
 
@@ -65,9 +63,8 @@ img.avatar {
 }
 
 h1 {
-    font-size: min(10em, 10vw);
+    font-size: min(10em, 15vw);
     margin: 0.25em 0em 0em 0em;
-    background-color: var(--border);
     padding: 0.2em;
     line-height: 0.5em;
     box-shadow: inset 0px 0px 0px 0.05em var(--nav), 0px 0.05em 0px var(--border);
@@ -75,7 +72,7 @@ h1 {
 
 p.tagline {
     color: var(--muted);
-    font-size: min(1.6em, 1.6vw);
+    font-size: min(1.6em, 2.4vw);
     margin-left: 8em;
     margin-top: -2.3em;
     padding-bottom: 2em;
@@ -122,6 +119,14 @@ p.tagline {
 .project h3 {
     margin: 0.2em 0;
     color: var(--link);
+}
+
+.project a {
+    color: var(--link);
+}
+
+.project a:hover {
+    color: var(--link-hover);
 }
 
 .project p {
