@@ -53,6 +53,7 @@ body {
 }
 
 header {
+    width: var(--width);
     margin-top: 3em;
 }
 
@@ -68,15 +69,17 @@ h1 {
     padding: 0.2em;
     line-height: 0.5em;
     box-shadow: inset 0px 0px 0px 0.05em var(--nav), 0px 0.05em 0px var(--border);
+    white-space: nowrap;
 }
 
 h2 {
     font-size: min(5em, 7.5vw);
-    margin: auto;
+    margin: 0.5em 1em 0.25em 1em;
 }
 
-.content p {
+p {
     max-width: var(--width);
+    margin: 0.5em;
     text-indent: 2em;
     text-align: left;
 }
