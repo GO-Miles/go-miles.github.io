@@ -1,11 +1,11 @@
 :root {
     --bg: #282f3a;
-    --nav: #5f5f63;
+    --bg2: #161b22;
+    --nav: #525255;
     --fg: #c9d1d9;
     --muted: #8b949e;
-    --card: #161b22;
     --link: #EFA94A;
-    --link-hover: #ffa500;
+    --link-hover: #ff7b00;
     --border: #20232a;
     --two: #82aafa;
     --tri: #ff3300;
@@ -25,7 +25,7 @@ nav {
     background-color: var(--nav);
     padding: 0.75em;
     box-sizing: border-box;
-    box-shadow: 0px 0.4em 0px #333333;
+    box-shadow: 0px 0.4em 0px var(--bg2);
     z-index: 10;
 }
 
@@ -53,22 +53,31 @@ body {
 }
 
 header {
-    margin-top: 3em;
+    margin: 3em 0em 3em 0em;
+    max-width: 90%;
+}
+
+a {
+    color: var(--link);
+    font-size: min(1em, 3.3vw);
+    text-decoration: none;
 }
 
 img.avatar {
     width: 1em;
     height: 1em;
     vertical-align: middle;
+    border-radius: 0.1em;
 }
 
 h1 {
-    font-size: min(10em, 15vw);
+    font-size: min(8em, 15vw);
     margin: 0.25em 0em 0em 0em;
     padding: 0.2em;
     line-height: 0.5em;
     box-shadow: inset 0px 0px 0px 0.05em var(--nav), 0px 0.05em 0px var(--border);
     white-space: nowrap;
+    border-radius: 0.2em;
 }
 
 h2 {
@@ -86,12 +95,11 @@ p {
 p.tagline {
     text-indent: 0em;
     color: var(--muted);
-    font-size: min(1.6em, 2.4vw);
-    margin-left: 8em;
-    margin-top: -2.3em;
+    font-size: min(1.28em, 2.4vw);
+    margin-left: 8.5em;
+    margin-top: -2.35em;
     padding-bottom: 0.5em;
     text-align: center;
-
 }
 
 .links {
@@ -109,7 +117,7 @@ p.tagline {
     text-decoration: underline;
 }
 
-.projects {
+.web-projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
     gap: 1.5em;
@@ -124,50 +132,39 @@ p.tagline {
     padding: 1em;
     transition: all 0.1s ease-out;
     box-shadow: 0px 0.4em 0px var(--border), inset 0px 0px 0px 0.3em var(--nav);
+    border-radius: 1em;
+    vertical-align: middle;
+    color: var(--link);
 }
 
 .project:hover {
+    color: var(--link-hover);
     transform: translateY(-0.4em);
     box-shadow: 0px 0.8em 0px var(--border), inset 0px 0px 0px 0.3em var(--nav);
 }
 
 .project:active {
+    color: var(--muted);
     transform: translateY(0.2em);
     box-shadow: 0px 0.2em 0px var(--border), inset 0px 0px 0px 0.3em var(--nav);
 }
 
-.project h3 {
-    margin: 0.2em 0;
-    color: var(--link);
-}
-
-.project a {
-    color: var(--link);
-}
-
-.project a:hover {
-    color: var(--link-hover);
-}
-
-.project p {
+#nopress {
     color: var(--muted);
-    font-size: 0.9em;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 0em;
     width: 100%;
-    background-color: black;
+    background-color: var(--bg2);
     color: var(--muted);
-    border-top: 0.5em solid var(--border);
+    border-top: 0.5em solid black;
     font-size: 0.9em;
 }
 
 footer p {
     text-indent: 0em;
+    padding: 0.5em;
+    padding-top: 0.25em;
     max-width: 100%;
     text-align: center;
 }
