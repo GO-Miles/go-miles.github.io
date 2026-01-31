@@ -3,10 +3,11 @@
     --bg2: #161b22;
     --nav: #525255;
     --fg: #c9d1d9;
-    --muted: #8b949e;
+    --muted: #a3aeb9;
     --link: #EFA94A;
     --link-hover: #ff7b00;
     --border: #20232a;
+    --cool: lime;
     --two: #82aafa;
     --tri: #ff3300;
 
@@ -15,6 +16,10 @@
 
 html {
     overflow-x: hidden;
+}
+
+.cool {
+    color: var(--cool);
 }
 
 nav {
