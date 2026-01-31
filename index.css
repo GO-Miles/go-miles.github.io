@@ -30,7 +30,7 @@ nav {
     background-color: var(--nav);
     padding: 0.75em;
     box-sizing: border-box;
-    box-shadow: 0px 0.4em 0px var(--bg2);
+    box-shadow: 0px 0.3em 0px var(--bg2);
     z-index: 10;
 }
 
@@ -162,7 +162,7 @@ footer {
     width: 100%;
     background-color: var(--bg2);
     color: var(--muted);
-    border-top: 0.5em solid black;
+    border-top: 0.3em solid black;
     font-size: 0.9em;
 }
 
