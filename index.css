@@ -131,6 +131,11 @@ p.tagline {
     margin: 3em auto;
 }
 
+
+section.embeds {
+    padding: 1em 0em 3em 0em;
+}
+
 .project {
     user-select: none;
     background: var(--border);
